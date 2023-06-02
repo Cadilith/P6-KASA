@@ -1,19 +1,19 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import ReactDOM from 'react-dom/client'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Header from './components/Header/'
-import Banner from './components/Banner/'
 import Home from './pages/Home/'
 import Apropos from './pages/Apropos/'
 import Estate from './pages/Estate'
 import Error from './components/Error'
 import './index.css'
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById('root'))
+
+root.render(
   <React.StrictMode>
     <Router>
       <Header />
-      <Banner />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/a-propos" element={<Apropos />} />
@@ -21,6 +21,5 @@ ReactDOM.render(
         <Route path="*" element={<Error />} />
       </Routes>
     </Router>
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.StrictMode>
 )

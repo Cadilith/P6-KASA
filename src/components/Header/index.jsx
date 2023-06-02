@@ -9,12 +9,12 @@ function Header() {
       <nav>
         <ul>
           <li>
-            <NavLink to="/" activeClassName="active">
+            <NavLink to="/" activeclassname="active">
               Accueil
             </NavLink>
           </li>
           <li>
-            <NavLink to="/a-propos" activeClassName="active">
+            <NavLink to="/a-propos" activeclassname="active">
               A propos
             </NavLink>
           </li>
