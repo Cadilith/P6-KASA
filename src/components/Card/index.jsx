@@ -1,7 +1,11 @@
-function Card() {
+import './card.css'
+
+function Card({ cover, name }) {
   return (
-    <div className="card">
-      <p>COMP CARD</p>
+    <div className="lodging-card">
+      <img className="lodging-card-image" src={cover} alt={name} />
+      <div className="card-gradient"></div>
+      <p>{name}</p>
     </div>
   )
 }

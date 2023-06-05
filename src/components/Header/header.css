@@ -15,7 +15,7 @@ nav a {
 .active {
   text-decoration: underline;
 }
-ul {
+nav ul {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
