@@ -1,5 +1,15 @@
+import Banner from '../../components/Banner/'
+import AproposBanner from '../../assets/banner-a-propos.png'
+import './apropos.css'
+
+const banner = 'banner a-propos'
+
 function Apropos() {
-  return <h1>A propos</h1>
+  return (
+    <main>
+      <Banner img={AproposBanner} className={banner} />
+    </main>
+  )
 }
 
 export default Apropos
