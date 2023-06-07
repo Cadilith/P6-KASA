@@ -1,4 +1,4 @@
-import './collapse.css'
+import './collapse.scss'
 import { useState } from 'react'
 import arrow from '../../assets/arrow.svg'
 
@@ -9,7 +9,7 @@ function Collapse(props) {
   }
   return (
     <div className="collapse-container">
-      <div className="collapse-title" onClick={toggle} activeclassname="active">
+      <div className="collapse-title" onClick={toggle}>
         <p>{props.collapseTitle}</p>
         <img className="arrow" src={arrow} alt="Ouvrir l'article" />
       </div>

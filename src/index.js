@@ -7,7 +7,7 @@ import Home from './pages/Home/'
 import Apropos from './pages/Apropos/'
 import Estate from './pages/Estate'
 import Error from './components/Error'
-import './index.css'
+import './index.scss'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
