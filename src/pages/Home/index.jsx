@@ -2,7 +2,8 @@ import Banner from '../../components/Banner/'
 import Card from '../../components/Card/'
 import logements from '../../datas/logements.json'
 import { Link } from 'react-router-dom'
-import homeBanner from '../../assets/banner.png'
+import homeBanner from '../../assets/banner.webp'
+import './home.scss'
 
 const banner = 'banner'
 
