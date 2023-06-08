@@ -14,6 +14,7 @@
   padding: 0;
   object-fit: cover;
 }
+
 body {
   padding: 40px 100px 0px 100px;
   max-width: 1440px;
@@ -22,6 +23,13 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    button {
+      background-color: rgba(0, 0, 0, 0);
+      border: none;
+      &:hover {
+        cursor: pointer;
+      }
+    }
   }
 }
 

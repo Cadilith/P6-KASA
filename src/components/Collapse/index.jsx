@@ -13,15 +13,21 @@ function Collapse(props) {
     <div className="collapse-container">
       <div className="collapse-title">
         <p>{props.collapseTitle}</p>
-        <img
-          className={open ? 'arrow down' : 'arrow up'}
-          src={arrow}
-          alt="Ouvrir l'article"
-          onClick={toggle}
-        />
+        <button
+          aria-expanded={open ? 'true' : 'false'}
+          aria-controls="collapse-parent"
+        >
+          <img
+            src={arrow}
+            className={open ? 'arrow down' : 'arrow up'}
+            alt="Ouvrir l'article"
+            onClick={toggle}
+          />
+        </button>
       </div>
 
       <div
+        id="collapse-parent"
         className={open ? 'collapse-parent show' : 'collapse-parent hide'}
         ref={contentRef}
         style={
