@@ -16,6 +16,7 @@ function Collapse(props) {
         <button
           aria-expanded={open ? 'true' : 'false'}
           aria-controls="collapse-parent"
+          aria-label="open this collapse"
         >
           <img
             src={arrow}
