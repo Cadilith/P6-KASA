@@ -9,9 +9,14 @@ function Collapse(props) {
   }
   return (
     <div className="collapse-container">
-      <div className="collapse-title" onClick={toggle}>
+      <div className="collapse-title">
         <p>{props.collapseTitle}</p>
-        <img className="arrow" src={arrow} alt="Ouvrir l'article" />
+        <img
+          className={open ? 'arrow down' : 'arrow up'}
+          src={arrow}
+          alt="Ouvrir l'article"
+          onClick={toggle}
+        />
       </div>
       {open && <div className="collapse-content">{props.children}</div>}
     </div>
