@@ -1,12 +1,14 @@
 import './collapse.scss'
 import { useState } from 'react'
 import arrow from '../../assets/arrow.svg'
+import { useRef } from 'react'
 
 function Collapse(props) {
   const [open, setOpen] = useState(false)
   const toggle = () => {
     setOpen(!open)
   }
+  const contentRef = useRef()
   return (
     <div className="collapse-container">
       <div className="collapse-title">
@@ -18,7 +20,18 @@ function Collapse(props) {
           onClick={toggle}
         />
       </div>
-      {open && <div className="collapse-content">{props.children}</div>}
+
+      <div
+        className={open ? 'collapse-parent show' : 'collapse-parent hide'}
+        ref={contentRef}
+        style={
+          open
+            ? { height: contentRef.current.scrollHeight + 'px' }
+            : { height: '0px' }
+        }
+      >
+        <div className="collapse-content">{props.children}</div>
+      </div>
     </div>
   )
 }
