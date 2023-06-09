@@ -7,30 +7,41 @@ const Carrousel = ({ slides }) => {
   const [current, setCurrent] = useState(0)
   const length = slides.length
 
-  const nextSlide = () => {
+  function goToNextSlide() {
     setCurrent(current === length - 1 ? 0 : current + 1)
   }
-  const previousSlide = () => {
+  function goToPrevSlide() {
     setCurrent(current === 0 ? length - 1 : current - 1)
   }
-
   return (
     <div className="carrousel-container">
-      {slides.map((slide, index) => {
-        return (
-          <div className="carrousel-img" key={index}>
-            {index === current && <img src={slide} alt="" />}
-          </div>
-        )
-      })}
       <div className="carrousel-button-container">
-        <button className="left-arrow" onClick={previousSlide}>
+        <button className="left-arrow" onClick={goToPrevSlide}>
           <img src={leftArrow} alt="précédente" />
         </button>
-        <button className="right-arrow" onClick={nextSlide}>
+        <button className="right-arrow" onClick={goToNextSlide}>
           <img src={rightArrow} alt="suivante" />
         </button>
       </div>
+      {slides.map((slide, index) => {
+        return (
+          <div
+            className={
+              current === index ? 'carrousel-img current ' : 'carrousel-img '
+            }
+            key={index}
+          >
+            {index === current && (
+              <>
+                <img src={slide} alt="" />
+                <p>
+                  {current + 1}/{length}
+                </p>
+              </>
+            )}
+          </div>
+        )
+      })}
     </div>
   )
 }
