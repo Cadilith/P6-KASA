@@ -39,7 +39,8 @@
 }
 .collapse-content {
   background-color: var(--background-color);
-  border-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
   padding: 0px 16px 10px 16px;
   p {
     font-size: 24px;
