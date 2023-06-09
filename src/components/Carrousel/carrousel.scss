@@ -1,0 +1,31 @@
+.carrousel-container {
+  position: relative;
+  height: 415px;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  .carrousel-button-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .carrousel-img {
+    width: 100%;
+    .img {
+      border-radius: 25px;
+      width: 100%;
+    }
+  }
+}
