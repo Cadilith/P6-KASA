@@ -27,14 +27,16 @@ const Carrousel = ({ slides }) => {
 
   return (
     <div className="carrousel-container">
-      <div className="carrousel-button-container">
-        <button className="left-arrow" onClick={goToPrevSlide}>
-          <img src={leftArrow} alt="précédente" />
-        </button>
-        <button className="right-arrow" onClick={goToNextSlide}>
-          <img src={rightArrow} alt="suivante" />
-        </button>
-      </div>
+      {length !== 1 && (
+        <div className="carrousel-button-container">
+          <button className="left-arrow" onClick={goToPrevSlide}>
+            <img src={leftArrow} alt="précédente" />
+          </button>
+          <button className="right-arrow" onClick={goToNextSlide}>
+            <img src={rightArrow} alt="suivante" />
+          </button>
+        </div>
+      )}
       {slides.map((slide, index) => {
         return (
           <div
@@ -48,9 +50,11 @@ const Carrousel = ({ slides }) => {
             {index === current && (
               <>
                 <img src={slide} alt="" />
-                <p>
-                  {current + 1}/{length}
-                </p>
+                {length !== 1 && (
+                  <p>
+                    {current + 1}/{length}
+                  </p>
+                )}
               </>
             )}
           </div>
