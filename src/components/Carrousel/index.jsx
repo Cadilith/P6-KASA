@@ -45,12 +45,14 @@ const Carrousel = ({ slides }) => {
             }
             key={index}
           >
-            <>
-              <img src={slide} alt="" />
-              <p>
-                {current + 1}/{length}
-              </p>
-            </>
+            {index === current && (
+              <>
+                <img src={slide} alt="" />
+                <p>
+                  {current + 1}/{length}
+                </p>
+              </>
+            )}
           </div>
         )
       })}

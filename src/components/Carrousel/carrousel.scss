@@ -29,15 +29,18 @@
     height: 100%;
 
     &.next {
-      transform: translate(-100%, 0);
+      transform: translate(-70%, 0);
+      opacity: 0.3;
     }
     &.prev {
       transform: translate(100%, 0);
+      opacity: 0.3;
     }
     &.current {
       left: 0px;
       transform: translate(0, 0);
-      transition: ease-in-out 0.8s;
+      transition: ease-in-out 1s;
+      opacity: 1;
     }
     p {
       position: absolute;
