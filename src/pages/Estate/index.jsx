@@ -1,16 +1,43 @@
 import Carrousel from '../../components/Carrousel'
+import Collapse from '../../components/Collapse'
 
 function Estate() {
-  const img = [
-    'https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg',
-    'https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-2.jpg',
-    'https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-3.jpg',
-    'https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-4.jpg',
-    'https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-5.jpg',
-  ]
   return (
     <main>
-      <Carrousel slides={img} />
+      <article className="estate">
+        <Carrousel slides={data.pictures} />
+        <section className="estate-details">
+          <div className="estate-title-container">
+            <h1>{data.title}</h1>
+            <p>{data.location}</p>
+            <ul className="tag-container">
+              {data.tags.map((tag, index) => {
+                return (
+                  <li key={index} className="tag">
+                    {tag}
+                  </li>
+                )
+              })}
+            </ul>
+          </div>
+          <div className="estate-owner-container">
+            <div className="estate-owner-profile">
+              <img src={data.host.picture} alt={data.host.name} />
+              <span className="estate-owner-rating">{data.rating}</span>
+            </div>
+          </div>
+          <div className="estate-collapsibles">
+            <Collapse collapseTitle={'Description'}>
+              <p>{data.description}</p>
+            </Collapse>
+            <Collapse collapseTitle={'Équipements'}>
+              {data.equipements.map((equipement, index) => {
+                return <li key={index}>{equipement}</li>
+              })}
+            </Collapse>
+          </div>
+        </section>
+      </article>
     </main>
   )
 }
