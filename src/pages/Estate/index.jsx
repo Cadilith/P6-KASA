@@ -2,6 +2,10 @@ import Carrousel from '../../components/Carrousel'
 import Collapse from '../../components/Collapse'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import '../../index.scss'
+import './estate.scss'
+import ProfilePicture from '../../components/ProfilePicture'
+import Rating from '../../components/Rating'
 
 function Estate() {
   const { id } = useParams()
@@ -33,23 +37,26 @@ function Estate() {
         <article className="estate">
           <Carrousel slides={estate[0].pictures} />
           <section className="estate-details">
-            <div className="estate-title-container">
-              <h1>{estate[0].title}</h1>
-              <p>{estate[0].location}</p>
-              <ul className="tag-container">
-                {estate[0].tags.map((tag, index) => {
-                  return (
-                    <li key={index} className="tag">
-                      {tag}
-                    </li>
-                  )
-                })}
-              </ul>
-            </div>
-            <div className="estate-owner-container">
-              <div className="estate-owner-profile">
-                <img src={estate[0].host.picture} alt={estate[0].host.name} />
-                <span className="estate-owner-rating">{estate[0].rating}</span>
+            <div className="estate-details-header">
+              <div className="estate-title-container">
+                <h1>{estate[0].title}</h1>
+                <p>{estate[0].location}</p>
+                <ul className="tag-container">
+                  {estate[0].tags.map((tag, index) => {
+                    return (
+                      <li key={index} className="tag">
+                        {tag}
+                      </li>
+                    )
+                  })}
+                </ul>
+              </div>
+              <div className="estate-owner-container">
+                <ProfilePicture
+                  picture={estate[0].host.picture}
+                  name={estate[0].host.name}
+                />
+                <Rating rating={estate[0].rating} />
               </div>
             </div>
             <div className="estate-collapsibles">

@@ -42,10 +42,8 @@
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   padding: 0px 16px 10px 16px;
-  p {
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 34.22px;
+  p,
+  ul {
     transition: 0.4s;
     padding-bottom: 18px;
   }

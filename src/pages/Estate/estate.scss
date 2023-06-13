@@ -1,0 +1,93 @@
+.estate-details-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
+  margin-bottom: 20px;
+  h1 {
+    font-size: 36px;
+    color: var(--main-color);
+  }
+  p {
+    margin-top: 4px;
+  }
+  ul {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: flex-start;
+    padding: 20px 0px;
+    li {
+      display: block;
+      background-color: var(--main-color);
+      color: #fff;
+      padding: 3px 15px 3px 15px;
+      box-sizing: border-box;
+      min-width: 115px;
+      font-size: 14px;
+      border-radius: 10px;
+      text-align: center;
+      line-height: 20px;
+    }
+  }
+}
+.estate-owner-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  .profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    p {
+      white-space: pre-wrap;
+      text-align: end;
+    }
+    img {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background-color: #c4c4c4;
+    }
+  }
+  .rating {
+    text-align: end;
+    .star {
+      margin-left: 0.5em;
+      font-size: 24px;
+      &.inactive {
+        fill: var(--secondary-color);
+      }
+      &.active {
+        fill: var(--main-color);
+      }
+      svg {
+        font-size: inherit;
+      }
+    }
+  }
+}
+.estate-collapsibles {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
+
+  .collapse-container {
+    width: 48%;
+    .collapse-content {
+      p,
+      ul {
+        line-height: 25.6px;
+        font-size: 18px;
+      }
+      ul {
+        padding-top: 16px;
+        padding-bottom: 0px;
+      }
+    }
+  }
+}

@@ -29,11 +29,11 @@
     height: 100%;
 
     &.next {
-      transform: translate(-70%, 0);
+      transform: translate(-90%, 0);
       opacity: 0.3;
     }
     &.prev {
-      transform: translate(100%, 0);
+      transform: translate(90%, 0);
       opacity: 0.3;
     }
     &.current {
