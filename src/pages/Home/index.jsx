@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import homeBanner from '../../assets/banner.webp'
 import './home.scss'
 import { useEffect, useState } from 'react'
+import { redirect } from 'react-router-dom'
 
 const banner = 'banner'
 
@@ -23,6 +24,7 @@ function Home() {
       .then(function (myJson) {
         setData(myJson)
       })
+      .catch((error) => console.log(error), redirect('*'))
   }
   useEffect(() => {
     getData()
