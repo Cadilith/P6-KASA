@@ -1,6 +1,6 @@
 import Banner from '../../components/Banner/'
 import Collapse from '../../components/Collapse'
-import AproposBanner from '../../assets/banner-a-propos.webp'
+import AproposBanner from '../../assets/img/banner-a-propos.webp'
 import './apropos.scss'
 
 const banner = 'banner a-propos'

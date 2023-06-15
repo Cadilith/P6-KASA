@@ -1,6 +1,6 @@
 import './collapse.scss'
 import { useState } from 'react'
-import arrow from '../../assets/arrow.svg'
+import arrow from '../../assets/img/arrow.svg'
 import { useRef } from 'react'
 
 function Collapse(props) {

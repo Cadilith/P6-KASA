@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import leftArrow from '../../assets/arrow-left.svg'
-import rightArrow from '../../assets/arrow-right.svg'
+import leftArrow from '../../assets/img/arrow-left.svg'
+import rightArrow from '../../assets/img/arrow-right.svg'
 import './carrousel.scss'
 
 const Carrousel = ({ slides }) => {

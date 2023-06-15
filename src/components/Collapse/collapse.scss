@@ -1,21 +1,27 @@
+@import '../../assets/style/variables.module.scss';
+
 .collapse-title {
-  background-color: var(--main-color);
-  height: 47px;
+  background-color: $main-color;
   border-radius: 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 5px 17px 5px 17px;
   box-sizing: border-box;
+  @media (max-width: 769px) {
+    padding: 5px 10px 5px 10px;
+  }
   p {
     color: #fff;
     font-size: 24px;
   }
   .arrow {
     width: 24px;
-    height: 24px;
     object-fit: contain;
     transition: 0.5s;
+    @media (max-width: 769px) {
+      width: 16px;
+    }
     &.down {
       transform: rotate(-0.5turn);
     }
@@ -38,7 +44,7 @@
   }
 }
 .collapse-content {
-  background-color: var(--background-color);
+  background-color: $background-color;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   padding: 0px 16px 10px 16px;

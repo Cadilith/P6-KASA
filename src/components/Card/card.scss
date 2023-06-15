@@ -10,6 +10,9 @@
   width: 100%;
   flex-grow: auto;
   box-sizing: border-box;
+  @media (max-width: 480px) {
+    aspect-ratio: 1.35/ 1;
+  }
   img {
     position: absolute;
     width: 100%;
