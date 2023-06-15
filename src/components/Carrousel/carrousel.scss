@@ -4,6 +4,9 @@
   width: 100%;
   overflow: hidden;
   border-radius: 25px;
+  @media (max-width: 768px) {
+    height: 255px;
+  }
   .carrousel-button-container {
     position: absolute;
     top: 0;
@@ -17,6 +20,14 @@
     justify-content: space-between;
     align-items: center;
     z-index: 999;
+    img {
+      @media (max-width: 768px) {
+        height: 40px;
+      }
+      @media (max-width: 480px) {
+        height: 20px;
+      }
+    }
   }
   .carrousel-img {
     position: absolute;

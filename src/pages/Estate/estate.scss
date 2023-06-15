@@ -7,12 +7,22 @@
   align-items: center;
   padding-top: 30px;
   margin-bottom: 20px;
+  @media (max-width: 768px) {
+    padding-top: 15px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
   h1 {
     font-size: 36px;
-    color: var(--main-color);
+    @media (max-width: 768px) {
+      font-size: 18px;
+    }
   }
   p {
-    margin-top: 4px;
+    margin-top: 5px;
+    @media (max-width: 768px) {
+      font-size: 14px;
+    }
   }
   ul {
     display: flex;
@@ -20,17 +30,26 @@
     gap: 10px;
     justify-content: flex-start;
     padding: 20px 0px;
+    @media (max-width: 768px) {
+      padding: 15px 0px;
+    }
     li {
       display: block;
-      background-color: var(--main-color);
       color: #fff;
+      background-color: $main-color;
       padding: 3px 15px 3px 15px;
       box-sizing: border-box;
       min-width: 115px;
       font-size: 14px;
-      border-radius: 10px;
+      border-radius: 15px;
       text-align: center;
       line-height: 20px;
+      @media (max-width: 768px) {
+        font-size: 10px;
+        min-width: 84px;
+        padding: 1px 15px 1px 15px;
+        border-radius: 5px;
+      }
     }
   }
 }
@@ -38,21 +57,38 @@
   display: flex;
   flex-direction: column;
   gap: 25px;
+  width: 100%;
+  @media (max-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
   .profile {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
     gap: 10px;
+    @media (max-width: 768px) {
+      order: 2;
+    }
+
     p {
       white-space: pre-wrap;
       text-align: end;
+      @media (max-width: 768px) {
+        font-size: 12px;
+      }
     }
     img {
       width: 64px;
       height: 64px;
       border-radius: 50%;
       background-color: #c4c4c4;
+      @media (max-width: 768px) {
+        height: 32px;
+        width: 32px;
+      }
     }
   }
   .rating {
@@ -60,11 +96,14 @@
     .star {
       margin-left: 0.5em;
       font-size: 24px;
+      @media (max-width: 768px) {
+        font-size: 13px;
+      }
       &.inactive {
-        fill: var(--secondary-color);
+        fill: $secondary-color;
       }
       &.active {
-        fill: var(--main-color);
+        fill: $main-color;
       }
       svg {
         font-size: inherit;
@@ -77,15 +116,32 @@
   flex-direction: row;
   align-items: stretch;
   justify-content: space-between;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 20px;
+  }
 
   .collapse-container {
     width: 48%;
-    .collapse-content {
-      p,
-      ul {
-        line-height: 25.6px;
-        font-size: 18px;
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+    p,
+    ul,
+    li {
+      line-height: 1.5em;
+      font-size: 18px;
+      @media (max-width: 768px) {
+        font-size: 13px;
       }
+    }
+    .collapse-title p {
+      padding: 8px 0px 8px 0px;
+      @media (max-width: 768px) {
+        padding: 3px 0px 3px 0px;
+      }
+    }
+    .collapse-content {
       ul {
         padding-top: 16px;
         padding-bottom: 0px;
