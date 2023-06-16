@@ -1,8 +1,10 @@
+@import '../../assets/style/variables.module.scss';
+
 .lodging-cards-container {
   display: block;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  background-color: var(--background-color);
+  background-color: $background-color;
   padding: 2vw;
   gap: 2vw;
   border-radius: 25px;
@@ -10,10 +12,11 @@
   box-sizing: border-box;
   @media (max-width: 769px) {
     grid-template-columns: 1fr 1fr;
+    background-color: #ffff;
   }
   @media (max-width: 480px) {
     grid-template-columns: 1fr;
     gap: 20px;
-    padding: 20px 0px 0px 0px;
+    padding: 20px 0px 20px 0px;
   }
 }
