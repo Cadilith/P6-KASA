@@ -1,4 +1,4 @@
-import Carrousel from '../../components/Carrousel'
+import Gallery from '../../components/Gallery'
 import Collapse from '../../components/Collapse'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
@@ -42,7 +42,7 @@ function Estate() {
     return (
       <main>
         <article className="estate">
-          <Carrousel slides={data[0].pictures} />
+          <Gallery slides={data[0].pictures} />
           <section className="estate-details">
             <div className="estate-details-header">
               <div className="estate-title-container">

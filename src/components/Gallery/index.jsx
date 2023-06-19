@@ -3,7 +3,7 @@ import leftArrow from '../../assets/img/arrow-left.svg'
 import rightArrow from '../../assets/img/arrow-right.svg'
 import './carrousel.scss'
 
-const Carrousel = ({ slides }) => {
+const Gallery = ({ slides }) => {
   const [current, setCurrent] = useState(0)
   const length = slides.length
 
@@ -64,4 +64,4 @@ const Carrousel = ({ slides }) => {
   )
 }
 
-export default Carrousel
+export default Gallery

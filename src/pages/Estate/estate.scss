@@ -139,10 +139,15 @@
         font-size: 13px;
       }
     }
-    .collapse-title p {
-      padding: 8px 0px 8px 0px;
-      @media (max-width: 768px) {
-        padding: 3px 0px 3px 0px;
+
+    .collapse-title {
+      border-radius: 10px;
+
+      p {
+        padding: 8px 0px 8px 0px;
+        @media (max-width: 768px) {
+          padding: 3px 0px 3px 0px;
+        }
       }
     }
     .collapse-content {
