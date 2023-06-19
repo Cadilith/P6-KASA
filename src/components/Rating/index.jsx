@@ -1,3 +1,4 @@
+//rating range is 1 to 5
 const range = [1, 2, 3, 4, 5]
 
 function Rating({ rating }) {

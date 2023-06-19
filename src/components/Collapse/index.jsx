@@ -9,6 +9,7 @@ function Collapse(props) {
     setOpen(!open)
   }
   const contentRef = useRef()
+
   return (
     <div className="collapse-container">
       <div className="collapse-title">

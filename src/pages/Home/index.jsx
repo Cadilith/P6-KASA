@@ -26,6 +26,7 @@ function Home() {
   }, [])
 
   if (error) {
+    // if error occurred return 404 page
     return <Error />
   } else if (data) {
     return (
@@ -36,11 +37,7 @@ function Home() {
             data.length > 0 &&
             data.map((lodging) => (
               <Link key={`estate-${lodging.id}`} to={`/estate/${lodging.id}`}>
-                <Card
-                  key={lodging.id}
-                  cover={lodging.cover}
-                  name={lodging.title}
-                />
+                <Card cover={lodging.cover} name={lodging.title} />
               </Link>
             ))}
         </div>
