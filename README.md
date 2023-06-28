@@ -1,3 +1,8 @@
+#OC projects P6 KASA
+
+Créer une SPA avec react et react rooter pour Kasa, une agence de location.
+Utilisation de SASS pour le style.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
